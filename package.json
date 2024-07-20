@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open":"npx cypress open",
-    "cy:run":"npx cypress run"
+    "cy:run":"npx cypress run",
+    "cy:dashboard": "npx cypress run --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b"
   },
 
   "repository": {
