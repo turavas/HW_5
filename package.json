@@ -8,8 +8,13 @@
     "cy:run":"npx cypress run",
     "cy:live": "npx cypress run --config-file config_live.js",
     "cy:stage": "npx cypress run --config-file config_stage.js",
+    "cy:electron": "npx cypress run --config-file config_live.js --browser electron",
+    "cy:chrome": "npx cypress run --config-file config_live.js --browser chrome",
+    "cy:live:electronANDchrome": "npm run cy:electron & npm run cy:chrome",
     "cy:dashboard:live": "npx cypress run --config-file config_live.js --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b",
-    "cy:dashboard:staging": "npx cypress run --config-file config_stage.js --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b"
+    "cy:dashboard:staging": "npx cypress run --config-file config_stage.js --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b",
+    "cy:browsers:dashboard": "npm run cy:electron -- --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b & npm run cy:chrome -- --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b"
+  
   },
 
   "repository": {
