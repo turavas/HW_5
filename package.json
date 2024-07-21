@@ -4,10 +4,12 @@
   "description": "Cypress lessons",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open":"npx cypress open",
     "cy:run":"npx cypress run",
-    "cy:dashboard": "npx cypress run --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b"
+    "cy:live": "npx cypress run --config-file config_live.js",
+    "cy:stage": "npx cypress run --config-file config_stage.js",
+    "cy:dashboard:live": "npx cypress run --config-file config_live.js --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b",
+    "cy:dashboard:staging": "npx cypress run --config-file config_stage.js --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b"
   },
 
   "repository": {
