@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   projectId: "j4fe4d",
-  watchForFileChanges: false,
+  watchForFileChanges: true,
   e2e: {
     baseUrl: "https://sqlverifier-live-6e21ca0ed768.herokuapp.com",
     env: {
