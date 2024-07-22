@@ -1,15 +1,5 @@
 describe("The redirection after clicking header's menu elements", () => {
-  beforeEach(() => {
-    cy.visit("/");
-    cy.clickElement("#account-menu > a > span");
-    cy.clickElement("#login-item > span");
-    cy.get("#username").type(Cypress.env("student_username"));
-    cy.get("#password").type(Cypress.env("student_password"));
-    cy.clickElement(
-      "#login-page > div > form > div.modal-footer > button.btn.btn-primary > span"
-    );
-  });
-  
+   
     it('Redirection to task page after clicking "Task" button', () => {
       cy.clickElement("#entity-menu > a > span");
       cy.clickElement("#entity-menu > div > a:nth-child(1)");

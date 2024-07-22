@@ -18,3 +18,13 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+beforeEach(() => {
+    cy.visit("/");
+    cy.clickElement("#account-menu > a > span");
+    cy.clickElement("#login-item > span");
+    cy.get("#username").type(Cypress.env("student_username"));
+    cy.get("#password").type(Cypress.env("student_password"));
+    cy.clickElement(
+      "#login-page > div > form > div.modal-footer > button.btn.btn-primary > span"
+    );
+});
