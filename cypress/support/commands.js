@@ -23,3 +23,26 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("clickElement", (selector) => {
+  cy.get(selector).click();
+});
+
+Cypress.Commands.add("enterText", (selector, text) => {
+  cy.get(selector).type(text);
+});
+
+Cypress.Commands.add("checkText", (selector, text) => {
+  cy.get(selector).should("have.text", text);
+});
+
+Cypress.Commands.add("checkElement", (selector) => {
+  cy.get(selector).should("be.visible");
+});
+
+Cypress.Commands.add("checkUrl", (text) => {
+  const baseUrl = Cypress.config("baseUrl");
+  cy.url().should("eq", baseUrl + text);
+});
+
+
