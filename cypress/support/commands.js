@@ -36,6 +36,10 @@ Cypress.Commands.add("checkText", (selector, text) => {
   cy.get(selector).should("have.text", text);
 });
 
+Cypress.Commands.add("clearText", (selector) => {
+  cy.get(selector).clear();
+});
+
 Cypress.Commands.add("checkElement", (selector) => {
   cy.get(selector).should("be.visible");
 });
@@ -45,4 +49,28 @@ Cypress.Commands.add("checkUrl", (text) => {
   cy.url().should("eq", baseUrl + text);
 });
 
+Cypress.Commands.add("checkClass", (selector, classValue) => {
+    cy.get(selector).should('have.class', classValue);
+});
 
+Cypress.Commands.add("checkAriaInvalid", (selector) => {
+  cy.get(selector).should('have.attr', 'aria-invalid', 'true');
+});
+
+Cypress.Commands.add("checkValid", (selector) => {
+  cy.get(selector).should('not.have.attr', 'aria-invalid', 'true');
+});
+
+Cypress.Commands.add("checkCSS", (selector, property, value) => {
+  cy.get(selector).should("have.css", property, value);
+});
+
+Cypress.Commands.add("checkFieldValidation", (selector, errorMessage) => {
+  cy.get(selector).should('have.attr', 'aria-invalid', 'true');
+  cy.get(selector).siblings('.invalid-feedback').should('contain', errorMessage);
+  });
+
+Cypress.Commands.add("checkFieldValid", (selector) => {
+  cy.get(selector).should('not.have.attr', 'aria-invalid', 'true');
+  cy.get(selector).siblings('.invalid-feedback').should('not.exist');
+});

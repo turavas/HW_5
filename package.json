@@ -4,8 +4,8 @@
   "description": "Cypress lessons",
   "main": "index.js",
   "scripts": {
-    "cy:open":"npx cypress open",
-    "cy:run":"npx cypress run",
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run",
     "cy:live": "npx cypress run --config-file config_live.js",
     "cy:stage": "npx cypress run --config-file config_stage.js",
     "cy:electron": "npx cypress run --config-file config_live.js --browser electron",
@@ -14,9 +14,7 @@
     "cy:dashboard:live": "npx cypress run --config-file config_live.js --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b",
     "cy:dashboard:staging": "npx cypress run --config-file config_stage.js --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b",
     "cy:browsers:dashboard": "npm run cy:electron -- --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b & npm run cy:chrome -- --record --key 5bc2fb00-485f-45d3-84ab-c86046f5337b"
-  
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/turavas/HW_5.git"
@@ -31,6 +29,7 @@
   },
   "homepage": "https://github.com/turavas/HW_5#readme",
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "cypress": "^13.13.1"
   }
 }
