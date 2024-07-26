@@ -8,6 +8,9 @@ module.exports = defineConfig({
     env: {
       student_username: "ola277",
       student_password: "123456",
+      adminLogin: "admin_proba",
+      adminPassword: "admin_proba",
+      baseUrl: "https://sqlverifier-live-6e21ca0ed768.herokuapp.com"
     },
     setupNodeEvents(on, config) {
       // implement node event listeners here
