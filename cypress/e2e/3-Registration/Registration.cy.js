@@ -115,7 +115,7 @@ describe("Email Validation Tests", () => {
     cy.checkFieldValid('[data-cy="email"]', "Your email is invalid.");
   });
 
-  it("Should reject an email with leading and trailing spaces", () => { //bug
+  it("Should reject an email with leading and trailing spaces", () => {
     cy.enterText('[data-cy="email"]', " test@test.com ");
     cy.get('[data-cy="email"]').blur();
     cy.checkFieldValidation('[data-cy="email"]', "Your email is invalid.");

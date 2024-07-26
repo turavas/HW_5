@@ -74,3 +74,8 @@ Cypress.Commands.add("checkFieldValid", (selector) => {
   cy.get(selector).should('not.have.attr', 'aria-invalid', 'true');
   cy.get(selector).siblings('.invalid-feedback').should('not.exist');
 });
+
+Cypress.Commands.add("logout", () => {
+  cy.contains("Account").click();
+  cy.contains("Sign out").click();
+});
