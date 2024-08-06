@@ -1,0 +1,6 @@
+{
+    "loginField": "#username",
+    "passwordField": "#password",
+    "loginButton": "#login-page > div > form > div.modal-footer > button.btn.btn-primary > span"
+  }
+ 
